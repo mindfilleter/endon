@@ -1,0 +1,4 @@
+2025-09-27 23:47:02,047 - INFO - Generating symbol for: Kuzrol
+2025-09-27 23:47:02,047 - INFO - Prompt: A high-resolution, iconic symbol for a fantasy deity. The style should be a clean, minimalist vector logo with a subtle, magical glow, centered on a dark, textured background. The symbol is: A black dripping hand print
+2025-09-27 23:47:11,407 - ERROR - Error generating image for Kuzrol
+2025-09-27 23:47:11,407 - ERROR - Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.

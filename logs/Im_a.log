@@ -1,0 +1,4 @@
+2025-09-27 23:46:52,785 - INFO - Generating symbol for: Im_a
+2025-09-27 23:46:52,786 - INFO - Prompt: A high-resolution, iconic symbol for a fantasy deity. The style should be a clean, minimalist vector logo with a subtle, magical glow, centered on a dark, textured background. The symbol is: A white snowflake crystal
+2025-09-27 23:47:02,045 - ERROR - Error generating image for Im_a
+2025-09-27 23:47:02,045 - ERROR - Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.

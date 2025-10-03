@@ -1,0 +1,4 @@
+2025-09-27 23:46:25,534 - INFO - Generating symbol for: Humdizal
+2025-09-27 23:46:25,534 - INFO - Prompt: A high-resolution, iconic symbol for a fantasy deity. The style should be a clean, minimalist vector logo with a subtle, magical glow, centered on a dark, textured background. The symbol is: A white grid intersecting a black oval
+2025-09-27 23:46:34,576 - ERROR - Error generating image for Humdizal
+2025-09-27 23:46:34,576 - ERROR - Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.

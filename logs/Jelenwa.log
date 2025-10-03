@@ -1,0 +1,4 @@
+2025-09-27 23:47:11,409 - INFO - Generating symbol for: Jelenwa
+2025-09-27 23:47:11,409 - INFO - Prompt: A high-resolution, iconic symbol for a fantasy deity. The style should be a clean, minimalist vector logo with a subtle, magical glow, centered on a dark, textured background. The symbol is: A cornucopia full of fruits, nuts, and berries
+2025-09-27 23:47:20,495 - ERROR - Error generating image for Jelenwa
+2025-09-27 23:47:20,495 - ERROR - Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
