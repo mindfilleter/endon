@@ -7,14 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main-content">
-        <h1>Endon Player Handout</h1>
+    <button id="nav-toggle-btn">☰</button>
+    <div id="left-nav">
         <div id="table-of-contents">
             <h2>Table of Contents</h2>
             <ul>
-                <li><a href="#deities">The Deities of Endon</a></li>
+                <li><a href="#deities">The Deities of Endon</a>
+                    <ul>
+                        <li><a href="#imea">Iméa</a></li>
+                        <li><a href="#oldroar">Oldroar</a></li>
+                        <li><a href="#jelenwa">Jelenwa</a></li>
+                        <li><a href="#yemop-lightcollar">Yemop Lightcollar</a></li>
+                        <li><a href="#petpetor">Petpetor</a></li>
+                        <li><a href="#kuzrol">Kuzrol</a></li>
+                        <li><a href="#gibbix">Gibbix</a></li>
+                        <li><a href="#humdizal">Humdizal</a></li>
+                    </ul>
+                </li>
                 <li><a href="#calendar">The Calendar of Endon</a></li>
-                <li><a href="#world">The World of Endon</a></li>
+                <li><a href="#world">The World of Endon</a>
+                    <ul>
+                        <li><a href="#the-central-continent">The Central Continent</a></li>
+                        <li><a href="#the-eastern-continent">The Eastern Continent</a></li>
+                        <li><a href="#the-southern-continent">The Southern Continent</a></li>
+                        <li><a href="#the-islands">The Islands</a></li>
+                        <li><a href="#regional-holidays">Regional Holidays</a>
+                            <ul>
+                                <li><a href="#halfling-holiday">Halfling Holiday</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="#persons">Important Persons</a></li>
                 <li><a href="#seafaring">Seas and Seafaring</a></li>
                 <li><a href="#languages">Languages of the People</a></li>
@@ -23,8 +46,13 @@
                 <li><a href="#appendix">Appendix: The Coil Calendar (Printable)</a></li>
             </ul>
         </div>
-        <h2 id="deities">The Deities of Endon</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; text-align: center;">
+    </div>
+
+    <div id="main-content-wrapper">
+        <div id="main-content">
+            <h1>Endon Player Handout</h1>
+            <h2 id="deities">The Deities of Endon</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; text-align: center;">
             <div style="border: 1px solid #444; padding: 1rem; border-radius: 4px;">
                 <a href="#imea"><strong>Iméa</strong></a>
                 <img src="art/gods/imdea.png" alt="Iméa Symbol" style="width: 100px; display: block; margin: 10px auto;">
@@ -405,6 +433,10 @@
             <li><a href="#the-islands"><em>The Islands</em></a>: A chain of islands in the southwest, known only to seafarers and the most well-traveled scholars.</li>
         </ul>
         <h3>Regions of Endon</h3>
+        <h3 id="regional-holidays">Regional Holidays</h3>
+        <p>Holiday celebrations vary by region, race, and local traditions. The first day of each stretch is typically a day of rest and celebration, but the specific customs depend on the deity being honored and the cultural practices of the people. For example, the halflings of Chaptain celebrate Yemop's Day with joyous feasts and gift-giving, while the elves of Far Lake observe Jelenwa's Day with quiet reverence and offerings to the forest.</p>
+        <h4 id="halfling-holiday">Halfling Holiday</h4>
+        <p>The first of Yemop is celebrated in halfling settlements with song and feast. Each settlement maintains an heirloom replica of the trenchcoat and the settlement votes on the bearer of the trenchcoat the morning of the first of Yemop. The most popular halfling is named Yemop for the day, then vested with the trenchcoat and showered with gifts of scrolls, papers, inkwells, quills, and books. At the end of the day, the Yemop always donates all of the gifts to the settlement’s schoolhouse, library, or directly to the children in order to inspire the curiosity of the next generation.</p>
         <a id="the-central-continent"></a>
         <h4>The Central Continent</h4>
         <p>The Central Continent is the ancestral home of the dwarves. They have established a formal kingdom, though their influence rarely extends beyond the great central mountain range and its immediate foothills. The Dwarven King, <a href="#kildrak-ironbuckle">Kildrak Ironbuckle</a>, rules from the capitol city of <a href="#the-alabaster-peak">The Alabaster Peak</a> and has established a series of baronies dotted along the length of the mountain range to protect his domain.</p>
@@ -470,8 +502,10 @@
         <a id="climate-and-geography"></a>
         <h3>Climate and Geography</h3>
         <p>The world of Endon is overwhelmingly cold. Most regions see snow and ice for much of the year, and survival is a constant struggle against the freezing temperatures. There are a few rare exceptions, small pockets of the world that can reach sub-tropical temperatures during the peak of the warmest days, but these are few and far between.</p>
-        <p>The <a href="#the-central-continent">Central Continent</a> is a vast tundra. A great frozen desert of ice and rock covers much of its western expanse. A more temperate region known as the "Lowlands" exists in the south, a sweeping territory that runs from <a href="#far-lake">Far Lake</a>, along the southern coast past <a href="#barons-bluff">Baron's Bluff</a> and <a href="#lebno">Lebno</a>, and connects to the settlement of <a href="#chaptain">Chaptain</a> in the west.</p>
-        <h3>Map & Travel</h3>
+        <div class="full-width-map-container">
+            <h3 id="map">Map & Travel</h3>
+            <img src="art/maps/world-map.png" alt="World map of Endon" class="world-map">
+        </div>
         <p>The overland map of Endon is measured in hexes.</p>
         <ul>
             <li><em>1 hex = 24 miles</em>, which is equivalent to 1 day of travel at a normal pace.</li>
@@ -513,7 +547,7 @@
         </table>
         <div id="printable-appendix">
             <hr>
-            <h2>Appendix: The Coil Calendar (Printable)</h2>
+            <h2 id="appendix">Appendix: The Coil Calendar (Printable)</h2>
             <p>Use the button below to print this section in landscape mode for a yearly overview.</p>
             <div class="calendar-grid-container">
                 <div class="season-marker">
@@ -806,6 +840,36 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggleBtn = document.getElementById('nav-toggle-btn');
+            const leftNav = document.getElementById('left-nav');
+            const mainContentWrapper = document.getElementById('main-content-wrapper');
+
+            navToggleBtn.addEventListener('click', function() {
+                document.body.classList.toggle('js-nav-collapsed');
+                leftNav.classList.toggle('collapsed');
+                mainContentWrapper.classList.toggle('collapsed');
+            });
+
+            function checkScreenWidth() {
+                if (window.innerWidth <= 768) {
+                    document.body.classList.add('js-nav-collapsed');
+                    leftNav.classList.add('collapsed');
+                    mainContentWrapper.classList.add('collapsed');
+                } else {
+                    document.body.classList.remove('js-nav-collapsed');
+                    leftNav.classList.remove('collapsed');
+                    mainContentWrapper.classList.remove('collapsed');
+                }
+            }
+
+            window.addEventListener('resize', checkScreenWidth);
+            checkScreenWidth();
+        });
+    </script>
 </body>
 </html>

@@ -1,49 +1,180 @@
+/* General Body Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     color: #d4d4d4;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #1e1e1e;
+    margin: 0;
+    display: flex;
 }
+
+/* Left Navigation Panel */
+#left-nav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2a2a2a;
+    padding: 20px;
+    transition: width 0.3s ease, padding 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+#left-nav.collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav-toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 250px; /* Aligned with the nav's edge */
+    background: #2a2a2a;
+    color: #d4d4d4;
+    border: 1px solid #444;
+    border-radius: 0 4px 4px 0;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1002; /* Ensure it's above the nav */
+    transition: left 0.3s ease;
+}
+
+#left-nav.collapsed + #main-content-wrapper #nav-toggle-btn,
+body > #nav-toggle-btn {
+    /* This selector is a bit complex to handle both states */
+}
+
+#left-nav.collapsed ~ #nav-toggle-btn {
+    left: 10px;
+}
+
+body > #nav-toggle-btn {
+    left: 260px; /* Initial position */
+}
+
+#left-nav.collapsed + #main-content-wrapper button#nav-toggle-btn {
+    left: 10px;
+}
+
+.js-nav-collapsed #nav-toggle-btn {
+    left: 10px;
+}
+
+
+
+/* Table of Contents */
+#table-of-contents h2 {
+    margin-top: 0;
+}
+
+#table-of-contents ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#table-of-contents ul li {
+    margin-bottom: 0.5em;
+}
+
+#table-of-contents ul ul {
+    padding-left: 20px;
+    margin-top: 0.5em;
+    list-style-type: circle;
+}
+
+#table-of-contents a {
+    text-decoration: none;
+}
+
+#table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main Content Area */
+#main-content-wrapper {
+    margin-left: 290px; /* Nav width + padding */
+    padding: 20px;
+    width: calc(100% - 290px);
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+#main-content-wrapper.collapsed {
+    margin-left: 40px;
+    width: calc(100% - 40px);
+}
+
+#main-content {
+}
+
+
+/* Headings and Links */
 h1, h2, h3, h4, h5, h6 {
     color: #e0e0e0;
 }
+
 a {
     color: #68a0cf;
 }
+
+/* Images */
 img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
     background-color: #2a2a2a;
 }
+
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1em;
 }
+
 th, td {
     border: 1px solid #444;
     padding: 8px;
     text-align: left;
 }
+
 th {
     background-color: #2a2a2a;
 }
+
+/* Code Blocks */
 code {
     background-color: #2a2a2a;
     padding: 2px 4px;
     border-radius: 4px;
     color: #d4d4d4;
 }
+
 pre {
     background-color: #2a2a2a;
     padding: 1em;
     border-radius: 4px;
     overflow-x: auto;
 }
+
+/* Map Styles */
+.full-width-map-container {
+    width: 100%;
+    margin: 2em 0;
+    text-align: center;
+}
+
+.world-map {
+    filter: invert(.9);
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+
 /* Appendix Styles */
 #printable-appendix {
     background-color: #2a2a2a;
@@ -51,22 +182,26 @@ pre {
     margin-top: 2em;
     border-radius: 8px;
 }
+
 .calendar-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1em;
 }
+
 .month-card {
     border: 1px solid #555;
     padding: 1em;
     border-radius: 4px;
 }
+
 .month-card h3 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0.5em;
     font-size: 1.1em;
 }
+
 .season-marker {
     grid-column: 1 / -1;
     text-align: center;
@@ -75,11 +210,13 @@ pre {
     border-radius: 4px;
     margin: 1em 0;
 }
+
 .day-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 5px;
 }
+
 .day-cell {
     border: 1px solid #444;
     border-radius: 2px;
@@ -87,14 +224,17 @@ pre {
     display: flex;
     flex-direction: column;
 }
+
 .day-number {
     font-size: 0.8em;
     padding: 2px;
     text-align: right;
 }
+
 .day-note {
     flex-grow: 1;
 }
+
 .day-cell:first-child .day-number {
     background-color: #68a0cf;
     color: #1e1e1e;
@@ -102,6 +242,7 @@ pre {
     border-radius: 2px 2px 0 0;
     margin: -1px; /* Cover the top border */
 }
+
 .print-button {
     display: block;
     width: 150px;
@@ -116,23 +257,31 @@ pre {
     cursor: pointer;
 }
 
+
+/* Print Styles */
 @media print {
     @page {
         size: landscape;
         margin: 0.5cm;
     }
+
     body {
         background-color: #fff;
         color: #000;
         font-size: 10pt;
-        margin: 0;
-        padding: 0;
+        display: block; /* Reset flex display for printing */
     }
-    /* Hide everything that shouldn't be printed */
-    #main-content, .print-button {
+
+    #left-nav, #nav-toggle-btn, .print-button {
         display: none;
     }
-    /* Reset appendix for printing */
+
+    #main-content-wrapper {
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
     #printable-appendix {
         background-color: #fff;
         color: #000;
@@ -140,28 +289,49 @@ pre {
         padding: 0;
         margin: 0;
     }
+
     h2, h3, h4 {
        color: #000;
     }
+
     .month-card, .day-cell {
         border: 1px solid #ccc;
     }
+
     .day-cell:first-child .day-number {
         background-color: #ccc !important;
         color: #000 !important;
     }
+
     .calendar-grid-container {
-        grid-template-columns: repeat(4, 1fr); /* Force 4 columns for landscape printing */
+        grid-template-columns: repeat(4, 1fr);
         gap: 0.5em;
     }
+
      .day-grid {
         grid-template-columns: repeat(6, 1fr);
         gap: 3px;
     }
+
     .day-cell {
         min-height: 80px;
     }
+
     .season-marker {
         border: 1px solid #ccc;
+    }
+}
+
+/* Responsive Styles for Narrow Screens */
+@media (max-width: 768px) {
+    #left-nav {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #main-content-wrapper {
+        margin-left: 40px;
+        width: calc(100% - 40px);
     }
 }
